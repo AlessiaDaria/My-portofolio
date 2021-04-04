@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About me section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        body {
+            background-image: url(images/about-img.png);
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: scroll;
+        }
+        
+        .main-banner-section {
+            position: relative;
+            padding: 90px 0px 250px;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+        }
+        
+        .main-banner-section .text-about p {
+            color: #fff;
+        }
+        
+        p,
+        .text-about {
+            position: relative;
+            line-height: 1.8em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: justify;
+            font-size: 17px;
+        }
+        
+        .sec-title.light .title,
+        .sec-title.light h2 {
+            color: #fff;
+            line-height: 0.8;
+        }
+        
+        .title {
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .btn-style-one {
+            position: relative;
+            line-height: 30px;
+            color: #000;
+            font-size: 15px;
+            font-weight: 700;
+            border: 1px solid #83c2ad;
+            background: #83c2ad;
+            text-transform: uppercase;
+            padding: 10px 55px 10px;
+            overflow: hidden;
+        }
+        
+        .theme-btn {
+            display: inline-block;
+            transition: all 0.6 ease;
+        }
+        
+        .btn-style-one:hover {
+            background-color: transparent;
+            text-decoration: none;
+            color: #00cc88;
+            border: 1px solid #00cc88;
+        }
+        
+        .sec-title .title {
+            position: relative;
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 33px;
+            text-transform: capitalize;
+            padding-left: 133px;
+        }
+        
+        .sec-title:before {
+            position: absolute;
+            content: '';
+            left: 17px;
+            top: 12px;
+            height: 2px;
+            width: 110px;
+            background: #fff;
+        }
+        
+        li::marker {
+            color: #ffe63e;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--MENU-->
+
+    <div class="toggleBtn">
+        <img class="menu-icon" src="menu.svg" alt="">
+        <img class="close-icon" src="close.svg" alt="">
+
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ABOUT PAGE -->
+
+    <section class="main-banner-section style-four container">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="sec-title light col-md-6 text-left">
+                    <div class="title">Welcome</div>
+                    <h2>
+                        ABOUT <br>
+                        <span style="font-size: 70px;">ME</span>
+                    </h2>
+                    <br>
+                    <div class="text-about">
+                        <p>"I'm a firm believer that simple is hard. And that design is truly about problem solving and making people's lives better."</p>
+                        <p>My name is Alessia Daria, a passionate graphic & web designer. Within my designs I value simplicity, symmetry and detail. Whether I'm designing books, branding, packaging or websites I always strive for beauty and balance.I'm curious,
+                            empathetic, rigorous, and experimental. Through brand strategy and visual development I create everything from books and exhibitions to branding, packaging and digital experince, seeking to own creative excellence at every
+                            touch-point.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="btn-box">
+                        <a href="Services.html" class="theme-btn btn-style-one">Explore</a>
+                        <div class="image">
+                            <img src="images/sign.png" alt="signature" width="140px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END OF ABOUT PAGE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+        var toggleBtn = document.querySelector(".toggleBtn");
+        var menu = document.querySelector(".menu");
+
+        //INTRo - LANDING ANIMATION
+        gsap.from(".text-inner > *", 2, {
+            opacity: 0,
+            delay: 2,
+            stagger: 0.2
+        })
+        gsap.from(".toggleBtn", 1, {
+            x: -150,
+            y: -150,
+            delay: 3.7
+        })
+        gsap.from(".stripe1 img", 2, {
+            y: 400,
+            opacity: 0,
+            stagger: 0.4,
+            delay: 5
+        })
+        gsap.from(".stripe2 img", 2, {
+
+            opacity: 0,
+            stagger: 0.4,
+            delay: 5
+        })
+
+        //MENU ANIMATION
+        var tl = new TimelineMax({
+            paused: true
+        });
+
+        tl.to(".menu-icon", 1.6, {
+            opacity: 0,
+            rotation: 180
+        })
+        tl.to(".close-icon", 1.4, {
+            opacity: 1,
+            rotation: 180
+        }, "-=0.5")
+        tl.to(".menu", 1.4, {
+            scale: 1
+        }, "-=1")
+        tl.from(".menu li", 1.5, {
+            opacity: 0,
+            x: -100,
+            stagger: .6
+        })
+
+        tl.reverse();
+
+        toggleBtn.onclick = function() {
+            tl.reversed(!tl.reversed());
+        }
+    </script>
+</body>
+
+</html>

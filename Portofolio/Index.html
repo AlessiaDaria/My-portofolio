@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Alessia`s portofolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="simplelightbox-master/dist/simple-lightbox.css">
+    <!-- LIGHTBOX-->
+    <script src="simplelightbox-master/dist/simple-lightbox.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div class="toggleBtn">
+        <img class="menu-icon" src="menu.svg" alt="">
+        <img class="close-icon" src="close.svg" alt="">
+
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <div class="text">
+            <div class="text-inner">
+                <h1>Alessia Daria</h1>
+                <p>Graphic & Web Designer</p>
+                <a href="About.html" class="btn">Explore more</a>
+                <div class="social">
+                    <a href="https://www.facebook.com/graphicsstudioAD"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/alessia.m.daria/"><i class="fa fa-instagram"></i></a>
+                    <a href="www.linkedin.com/in/mereuță-alessia-daria-a649231a3"><i class="fa fa-linkedin" ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="img-stripe stripe1">
+                <a href="images/home1.png"><img src="images/home1.png" alt=""></a>
+                <a href="images/home2.png"><img src="images/home2.png" alt=""></a>
+                <a href="images/home3.jpg"><img src="images/home3.jpg" alt=""></a>
+                <a href="images/home4.png"><img src="images/home4.png" alt=""></a>
+                <a href="images/home5.jpg"><img src="images/home5.jpg" alt=""></a>
+                <a href="images/home6.png"><img src="images/home6.png" alt=""></a>
+            </div>
+            <div class="img-stripe stripe2">
+                <a href="images/home7.png"><img src="images/home7.png" alt=""></a>
+                <a href="images/home8.jpg"><img src="images/home8.jpg" alt=""></a>
+                <a href="images/home9.png"><img src="images/home9.png" alt=""></a>
+                <a href="images/home10.png"><img src="images/home10.png" alt=""></a>
+                <a href="images/home11.png"><img src="images/home11.png" alt=""></a>
+                <a href="images/home12.png"><img src="images/home12.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+        var toggleBtn = document.querySelector(".toggleBtn");
+        var menu = document.querySelector(".menu");
+
+        //INTRP - LANDING ANIMATION
+        gsap.from(".text-inner > *", 2, {
+            opacity: 0,
+            delay: 1.8,
+            stagger: 0.2
+        })
+        gsap.from(".toggleBtn", 1, {
+            x: -150,
+            y: -150,
+            delay: 3
+        })
+        gsap.from(".stripe1 img", 2, {
+            y: 400,
+            opacity: 0,
+            stagger: 0.4,
+            delay: 4.5
+        })
+        gsap.from(".stripe2 img", 2, {
+
+            opacity: 0,
+            stagger: 0.4,
+            delay: 4.5
+        })
+
+        //MENU ANIMATION
+        var tl = new TimelineMax({
+            paused: true
+        });
+
+        tl.to(".menu-icon", 1.6, {
+            opacity: 0,
+            rotation: 180
+        })
+        tl.to(".close-icon", 1.4, {
+            opacity: 1,
+            rotation: 180
+        }, "-=0.5")
+        tl.to(".menu", 1.4, {
+            scale: 1
+        }, "-=1")
+        tl.from(".menu li", 1.5, {
+            opacity: 0,
+            x: -100,
+            stagger: .6
+        })
+
+        tl.reverse();
+
+        toggleBtn.onclick = function() {
+            tl.reversed(!tl.reversed());
+        }
+
+        /* Lightbox*/
+        var lightbox = new SimpleLightbox('.img a', { /*Options*/ });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Services Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        section a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--MENU-->
+    <div class="toggleBtn">
+        <img class="menu-icon" src="menu.svg" alt="">
+        <img class="close-icon" src="close.svg" alt="">
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--SERVICES PAGE-->
+
+    <section class="services container">
+        <div class="title">
+            <h2>services</h2>
+            <div>
+                <h2>services</h2>
+            </div>
+        </div>
+        <p class="text-services">
+            I use strategy and design to capture the spirit of your brand.
+        </p>
+        <div class="row">
+            <div class="item">
+                <span> <i class="fab fa-sketch"></i></span>
+                <h2> web design</h2>
+            </div>
+            <div class="item">
+                <span><i class="fas fa-code"></i></span>
+                <h2> web development</h2>
+            </div>
+            <div class="item">
+                <span> <i class="fas fa-layer-group"></i></span>
+                <h2> graphic design</h2>
+            </div>
+            <div class="item">
+                <span> <i class="fas fa-flask"></i></span>
+                <h2> branding</h2>
+            </div>
+            <div class="item">
+                <span> <i class="fas fa-pen"></i></span>
+                <h2> copywriting</h2>
+            </div>
+            <div class="item">
+                <span> <i class="fas fa-pen"></i></span>
+                <h2> content writing</h2>
+            </div>
+        </div>
+        <a href="Projects.html"><button type="button" class="btn">view more</button></a>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- END OF SERVICES PAGE-->
+    <!--FOOTER-->
+    <footer id="footer">
+        <div class="footer-w">
+            <div class="imge">
+                <img src="images/sign.png" alt="signature" width="200px">
+            </div>
+            <div class="m-left">
+                <h2>Useful links</h2>
+                <div class="links">
+                    <span><p>Home</p></span>
+                    <span><p>About</p></span>
+                    <span><p>Services</p></span>
+                    <span><p>Portofolio</p></span>
+                    <span><p>Contact</p></span>
+                </div>
+            </div>
+            <div class="m-right">
+                <h2>Have a question?</h2>
+                <div class="contact">
+                    <span><i class="fas fa-envelope"></i></span>
+                    <span>
+                    <p>Email<br>alessia.m.daria@gmail.com</p>
+                </span>
+                </div>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i></span>
+                    <span>
+                    <p>Phone<br>+40723 185 179</p>
+                </span>
+                </div>
+            </div>
+            <div class="s-icons">
+                <h2>Be social</h2>
+                <div class="s-box">
+                    <a href="https://www.facebook.com/graphicsstudioAD"><span><i class="fa fa-facebook"></i></span></a>
+                    <a href="https://www.whatsapp.com/?lang=en"><span><i class="fa fa-whatsapp"></i></span></a>
+                    <a href="https://www.instagram.com/alessia.m.daria/"><span><i class="fa fa-instagram"></i></span></a>
+                    <a href="www.linkedin.com/in/mereuță-alessia-daria-a649231a3"><span><i class="fa fa-linkedin" ></i></span></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="bottom">
+            <center>
+                <span class="credit">Designed & Developed by <span class="ad">Alessia Daria </span> | </span>
+                <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+            </center>
+        </div>
+    </footer>
+    <!--END OF FOOTER-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+        var toggleBtn = document.querySelector(".toggleBtn");
+        var menu = document.querySelector(".menu");
+
+        //INTRP - LANDING ANIMATION
+        gsap.from(".text-inner > *", 2, {
+            opacity: 0,
+            delay: 2,
+            stagger: 0.2
+        })
+        gsap.from(".toggleBtn", 1, {
+            x: -150,
+            y: -150,
+            delay: 3.7
+        })
+        gsap.from(".stripe1 img", 2, {
+            y: 400,
+            opacity: 0,
+            stagger: 0.4,
+            delay: 5
+        })
+        gsap.from(".stripe2 img", 2, {
+
+            opacity: 0,
+            stagger: 0.4,
+            delay: 5
+        })
+
+
+
+        //MENU ANIMATION
+        var tl = new TimelineMax({
+            paused: true
+        });
+
+        tl.to(".menu-icon", 1.6, {
+            opacity: 0,
+            rotation: 180
+        })
+        tl.to(".close-icon", 1.4, {
+            opacity: 1,
+            rotation: 180
+        }, "-=0.5")
+        tl.to(".menu", 1.4, {
+            scale: 1
+        }, "-=1")
+        tl.from(".menu li", 1.5, {
+            opacity: 0,
+            x: -100,
+            stagger: .6
+        })
+
+        tl.reverse();
+
+        toggleBtn.onclick = function() {
+            tl.reversed(!tl.reversed());
+        }
+    </script>
+</body>
+
+</html>

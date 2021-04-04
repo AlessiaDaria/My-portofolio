@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="main.css">
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-color: #000000;
+        }
+        
+        .contact-wrapper {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            color: #83c2ad;
+        }
+        
+        #contact {
+            width: 80%;
+            height: 70%;
+            margin: 5% 10%;
+            box-shadow: 3px 3px 40px grey;
+            background: #83c2ad;
+        }
+        
+        .con-box {
+            display: inline-block;
+        }
+        
+        .info {
+            color: #90d3bc;
+            height: 100%;
+            width: 39%;
+            background: #006856;
+            font-size: 20px;
+        }
+        
+        .con-form {
+            width: 50%;
+        }
+        
+        .con {
+            padding: 5%;
+        }
+        
+        .con h2 {
+            padding-top: 0;
+            margin-top: 0;
+        }
+        
+        .info ul li {
+            list-style: none;
+            margin: 8% 0;
+        }
+        
+        .info ul li img {
+            width: 47px;
+        }
+        
+        .social-media {
+            margin-top: 30%;
+        }
+        
+        .social-media ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 5%;
+        }
+        
+        .social-media ul li img {
+            width: 48px;
+        }
+        
+        h2,
+        .form input,
+        .form textarea,
+        #sbmt-btn {
+            display: block;
+            border: none;
+            margin: 5%;
+            width: 92%;
+            padding: 2%;
+        }
+        
+        input,
+        textarea {
+            background: #509e84;
+        }
+        
+         ::placeholder {
+            color: #00362d;
+            font-size: 15px;
+        }
+        
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        .con-form h2 {
+            color: #00362d;
+        }
+        
+        #sbmt-btn {
+            color: #5dbb9b;
+            width: 93%;
+            background: #006856;
+            font-size: 17px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        @media (max-width:1024px) {
+            #contact {
+                width: 100%;
+                margin: 0;
+                background: none;
+                box-shadow: none;
+            }
+            .info,
+            .con-form {
+                width: 100%;
+                height: 70%;
+            }
+            .social-media {
+                margin-top: 2%;
+            }
+            .con h2 {
+                color: #00ffaa;
+                margin-top: 5%;
+            }
+            .social-media ul li img {
+                width: 37px;
+            }
+            .info ul li img {
+                width: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--NAVIGATION-->
+    <div class="toggleBtn">
+        <img class="menu-icon" src="menu.svg" alt="">
+        <img class="close-icon" src="close.svg" alt="">
+
+    </div>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Services.html">SERVICES</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--END OF NAVIGATION-->
+    <!--CONTACT PAGE-->
+    <div class="contact-wrapper">
+        <div id="contact">
+            <div class="info con-box">
+                <div class="con">
+                    <h2>Contact me</h2>
+                    <ul>
+                        <li><span><img src="images/email.svg" alt=""></span> alessia.m.daria@gmail.com</li>
+                        <li><span><img src="images/mobile.svg" alt=""></span> +40723 185 179
+                        </li>
+
+                        <li><span><img src="images/more.svg" alt=""></span> &nbsp &nbsp To know more connect me</li>
+                    </ul>
+                    <div class="social-media">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/graphicsstudioAD"><img src="images/facebook.svg" alt="fb"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/alessia.m.daria/"><img src="images/instagram.svg" alt="instagram"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.whatsapp.com/?lang=en"><img src="images/whatsapp.svg" alt="whatsapp"></a>
+                            </li>
+                            <li>
+                                <a href="www.linkedin.com/in/mereuță-alessia-daria-a649231a3"><img src="images/linkedin.svg" alt="linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="con-form con-box">
+                <div class="con">
+                    <h2>GET IN TOUCH</h2>
+                    <form action="https://formsubmit.co/alessia.m.daria@gmail.com" method="POST" class="form">
+                        <input type="text" name=" first name" placeholder="First Name" required>
+                        <input type="text" name="last name" placeholder="Last Name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <textarea type="text" name="message" placeholder="Enter your text here......" id="message" required></textarea>
+                        <input type="hidden" name=" _next" value="https://laughing-mcnulty-c2a5d2.netlify.app/">
+                        <input type="submit" value="Send" id="sbmt-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END OF CONTACT PAGE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+        var toggleBtn = document.querySelector(".toggleBtn");
+        var menu = document.querySelector(".menu");
+
+        //INTRP - LANDING ANIMATION
+        gsap.from(".text-inner > *", 2, {
+            opacity: 0,
+            delay: 2,
+            stagger: 0.2
+        })
+        gsap.from(".toggleBtn", 1, {
+            x: -150,
+            y: -150,
+            delay: 3.7
+        })
+        gsap.from(".stripe1 img", 2, {
+            y: 400,
+            opacity: 0,
+            stagger: 0.4,
+            delay: 5
+        })
+        gsap.from(".stripe2 img", 2, {
+
+            opacity: 0,
+            stagger: 0.4,
+            delay: 5
+        })
+
+        //MENU ANIMATION
+        var tl = new TimelineMax({
+            paused: true
+        });
+
+        tl.to(".menu-icon", 1.6, {
+            opacity: 0,
+            rotation: 180
+        })
+        tl.to(".close-icon", 1.4, {
+            opacity: 1,
+            rotation: 180
+        }, "-=0.5")
+        tl.to(".menu", 1.4, {
+            scale: 1
+        }, "-=1")
+        tl.from(".menu li", 1.5, {
+            opacity: 0,
+            x: -100,
+            stagger: .6
+        })
+
+        tl.reverse();
+
+        toggleBtn.onclick = function() {
+            tl.reversed(!tl.reversed());
+        }
+    </script>
+</body>
+
+</html>
